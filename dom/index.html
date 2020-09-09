@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="#">
+
+    <script>
+        function printResult() 
+        {
+            var x = parseInt(prompt(" X : ", 0));
+            var y = parseInt(prompt(" Y : ", 0));
+
+            btnPrint.value = x + y;
+        }
+
+        window.onload = function() {
+            btnPrint.onclick = printResult;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="클릭" id="btnPrint"><br>
+    <span id="span1" onclick="alert('팬스.팬스');">스팬스팬</span>
+</body>
+</html>
+

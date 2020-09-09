@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="#">
+    <script src="./javascript1-dom.js"></script>
+
+</head>
+<body>
+    <section id="section4">
+        <h1>Dx5 : Element node의 속성 변경</h1>
+        <div>
+            <input class="src-input" list="img-list" />
+            <datalist id="img-list">
+                <option value="img1.jpg">img1</option>
+                <option value="img2.jpg">img2</option>
+                <option value="img3.jpg">img3</option>
+            </datalist>
+            <select class="img-select">
+                <option value="img1.jpg">img1</option>
+                <option value="img2.jpg">img2</option>
+                <option value="img3.jpg">img3</option>
+            </select>
+            <input type="color" class="color-input" />
+            <input class="change-button" type="button" value="변경하기" />
+        </div>
+        <div>
+            <img class="img" src="images/img1.jpg" style="border:1px solid red;" />
+        </div>
+    </section>
+
+    <section id="section3">
+        <h1>Ex3 : Selectors API Level 1</h1>
+        <div>
+            <input name="x" type="text" value="0" dir="rtl" />
+             +
+            <input class="txt-y" type="text" value="0" dir="rtl" />
+            <input class="btn-add" type="button" value="=" />
+            <input class="txt-sum" type="text" value="0" readonly dir="rtl" />
+        </div>
+    </section>
+
+    <section id="section1">
+        <h1>Ex1 : 계산귀</h1>
+        <div>
+            <input id="txt-x" type="text" value="0" dir="rtl" />
+             +
+            <input id="txt-y" type="text" value="0" dir="rtl" />
+            <input id="btn-add" type="button" value="=" />
+            <input id="txt-sum" type="text" value="0" readonly dir="rtl" />
+        </div>
+    </section>
+
+</body>
+</html>
+
