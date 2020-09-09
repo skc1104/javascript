@@ -1,3 +1,7 @@
 2020-09-01
 Newlec 강의 
 https://www.youtube.com/watch?v=_W3LLg-Uu38&list=PLq8wAnVUcTFWhQrIXNN6kPYXJA6X2IQM4&index=4
+
+2020-09-09
+git, 알 듯 알 듯 한데 아직은 정확히 모르겠다.
+
