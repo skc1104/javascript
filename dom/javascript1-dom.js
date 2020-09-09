@@ -1,17 +1,43 @@
+// Ex6 : 엘리먼트 노드의 속성 & CSS 속성 변경
+window.addEventListener("load", function() {
+    var section = document.querySelector("#section6");
+    var titleInput = section.querySelector(".title-input");
+    var menuListDiv = section.querySelector(".menu-list");
+    var addButton = section.querySelector(".add-button");
+    var delButton = section.querySelector(".del-button");
+
+    addButton.onclick = function() {
+        var title = titleInput.value;
+        var txtNode = document.createTextNode(title);
+        menuListDiv.appendChild(txtNode);
+    };
+
+    delButton.onclick = function() {
+        var txtNode = menuListDiv.childNodes[0];
+        menuListDiv.removeChild(txtNode);
+    };
+
+});
+
 // Ex5 : Dx5 : Element node의 속성 변경
 window.addEventListener("load", function() {
-    var section = document.querySelector("#section4");
-    var srcInput = section.querySelector(".src-input");
-    var imgSelect = section.querySelector(".img-select");
-    var changeButton = section.querySelector(".change-button");
-    var colorInput = section.querySelector(".color-input");
-    var img = section.querySelector(".img");
+    var section5 = document.querySelector("#section5");
+    var srcInput = section5.querySelector(".src-input");
+    var imgSelect = section5.querySelector(".img-select");
+    var changeButton = section5.querySelector(".change-button");
+    var colorInput = section5.querySelector(".color-input");
+    var img = section5.querySelector(".img");
+
+    imgSelect.onchange = function() {
+        srcInput.value = imgSelect.value;
+    }
 
     changeButton.onclick = function() {
         //img.src = "images/" + imgSelect.value;
         img.src = "images/" + srcInput.value;
         img.style.borderColor = colorInput.value;
         //img.style["border-color"] = colorInput.value;
+        console.log(img.className);
     };
 });
 
