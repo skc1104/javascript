@@ -1,20 +1,52 @@
-// Ex6 : 엘리먼트 노드의 속성 & CSS 속성 변경
+// Ex7 : 노드 복제와 템플릿 태그
+window.addEventListener("load", function() {
+    var notices = [
+        {id:5, title:"보험회사", regDate:"2020-04-12", writerId:"Sam", hit:0 },
+        {id:6, title:"제왕의 반지", regDate:"2020-05-22", writerId:"Prodo", hit:8 },
+    ];
+    
+    var section = document.querySelector("#section7");
+   
+});
+
+    // Ex6 : 엘리먼트 노드의 속성 & CSS 속성 변경
 window.addEventListener("load", function() {
     var section = document.querySelector("#section6");
     var titleInput = section.querySelector(".title-input");
-    var menuListDiv = section.querySelector(".menu-list");
+    var menuListUl = section.querySelector(".menu-list");
     var addButton = section.querySelector(".add-button");
     var delButton = section.querySelector(".del-button");
 
     addButton.onclick = function() {
+        
         var title = titleInput.value;
+        var html = "<a href='#'>" + title + "</a>";
+        var li = document.createElement("li");
+        li.innerHTML = html;
+        menuListUl.append(li, title);
+
+        
+        // var title = titleInput.value;
+        // var txtNode = document.createTextNode(title);
+        // var aNode = document.createElement("a");
+        // aNode.href = "#";
+        // //aNode.innerText = title;
+        // aNode.appendChild(txtNode);
+
+        // var liNode = document.createElement("li");
+        // liNode.append(aNode);
+        // menuListUl.appendChild(liNode);
+        
+        /*var title = titleInput.value;
         var txtNode = document.createTextNode(title);
-        menuListDiv.appendChild(txtNode);
+        menuListUl.appendChild(txtNode);*/
     };
 
     delButton.onclick = function() {
-        var txtNode = menuListDiv.childNodes[0];
-        menuListDiv.removeChild(txtNode);
+        // var txtNode = menuListUl.childNodes[0];
+        var liNode = menuListUl.children[0];
+        //menuListUl.removeChild(liNode);
+        liNode.remove();
     };
 
 });
