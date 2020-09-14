@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="shortcut icon" href="#">
+<script>
+    window.addEventListener("load", function() {
+        var body = document.querySelector("body");
+        var nodeOne = body.firstElementChild;
+        console.log(nodeOne);
+        console.log(nodeOne.nextElementSibling);
+        console.log(nodeOne.nextElementSibling.nextElementSibling);
+        console.log(nodeOne.nextElementSibling.nextElementSibling.nextElementSibling);
+        console.log(nodeOne.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling);
+    });
+</script>
+
+</head>
+<body><h1>Hello</h1>Plain Text. 하지만 평범하진 않아.<br />이 이야기는 끝이 나지 않을거야.
+</body>
+</html>
