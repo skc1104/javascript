@@ -1,3 +1,115 @@
+'Use Strict'
+
+// Ex9 : 마우스 이벤트 객체 : 박스의 옵셋 영역 좌표 이용하기
+window.addEventListener("load", function() {
+    var section = document.querySelector("#section9");
+    var container = section.querySelector(".container");
+    var box = section.querySelector(".box");
+    var status = section.querySelector(".status");
+    var current = null;
+
+    var dragging = false;
+    var offset = { x:0, y:0 };
+    var containerPos = { left:container.offsetLeft, top:container.offsetTop };
+
+    console.log(containerPos.left);
+    console.log(containerPos.top);
+    
+    section.onmousedown = function(e) {
+        if(e.target.classList.contains("box")) { 
+            dragging = true;
+            current = e.target;
+            offset.x = e.offsetX;
+            offset.y = e.offsetY;
+        }
+    }
+
+    section.onmousemove = function(e)  {
+        if(!dragging) return;
+    
+        var x = e.pageX - offset.x - containerPos.left;
+        var y = e.pageY - offset.y - containerPos.top;
+        if(x < 0) x = 0;
+        if(y < 0) y = 0;
+        status.innerText = box.style.width;
+        if(x+100 > 800) x = 800-100;
+        if(y+100 > 400) y = 400-100;
+        current.style.left = x + "px";
+        current.style.top = y + "px";
+
+        //status.innerText = "(x, y) : ( " + x + ", " + y + " )";
+    }
+
+    section.onmouseup = function(e) {
+        dragging = false;
+    }
+});
+
+// Ex8 : 마우스 이벤트 객체 : 여러개 박스 드래그 방식으로 박스 옮기기
+window.addEventListener("load", function() {
+    var section = document.querySelector("#section8");
+    var container = section.querySelector(".container");
+    //var box = section.querySelector(".box");
+    var current = null;
+
+    var dragging = false;
+    var offset = { x:0, y:0 };
+
+    // box.onmousedown = function(e) {
+    //     offset.x = e.offsetX;
+    //     offset.y = e.offsetY;
+    // }
+    
+    container.onmousedown = function(e) {
+        if(e.target.classList.contains("box")) { 
+            dragging = true;
+            current = e.target;
+            offset.x = e.offsetX;
+            offset.y = e.offsetY;
+        }
+    }
+
+    container.onmousemove = function(e)  {
+        if(dragging) {
+            current.style.left = e.pageX - offset.x + "px";
+            current.style.top = e.pageY - offset.y + "px";
+        }
+    }
+
+    container.onmouseup = function(e) {
+        dragging = false;
+    }
+});
+
+// Ex7 : 마우스 이벤트 객체 : 드래그 방식으로 박스 옮기기
+window.addEventListener("load", function() {
+    var section = document.querySelector("#section7");
+    var container = section.querySelector(".container");
+    var box = section.querySelector(".box");
+    var dragging = false;
+    var offset = { x:0, y:0 };
+
+    box.onmousedown = function(e) {
+        offset.x = e.offsetX;
+        offset.y = e.offsetY;
+    }
+    container.onmousedown = function(e) {
+        if(e.target === box) 
+            dragging = true;
+    }
+
+    container.onmousemove = function(e)  {
+        if(dragging) {
+            box.style.left = e.pageX - offset.x + "px";
+            box.style.top = e.pageY - offset.y + "px";
+        }
+    }
+
+    container.onmouseup = function(e) {
+        dragging = false;
+    }
+});
+
 // Ex6 : 마우스 이벤트 객체 : 마우스 좌표
 window.addEventListener("load", function() {
     var section = document.querySelector("#section6");
@@ -6,9 +118,12 @@ window.addEventListener("load", function() {
 
     container.onclick = function(e)  {
         // 클릭된 위치 좌표
-        console.log(box.style.position);
-        box.style.left = e.x + "px";
-        box.style.top = e.y + "px";
+        console.log("(x,y) : " + e.x + ", " + e.y);
+        console.log("(clientX,clientY) : " + e.clientX + ", " + e.clientY);
+        console.log("(pageX,pageY) : " + e.pageX + ", " + e.pageY);
+        console.log("(offsetX,offsetY) : " + e.offsetX + ", " + e.offsetY);
+        box.style.left = e.pageX + "px";
+        box.style.top = e.pageY + "px";
     }
 });
 
