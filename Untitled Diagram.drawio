@@ -1,1 +1,40 @@
-<mxfile host="app.diagrams.net" modified="2020-11-26T09:42:53.160Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" version="13.10.1" etag="ktVtApzTjMguESxAjoBP" type="github"><diagram id="u2slVhVgmf08d2AswuaU">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-26T09:50:25.208Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="JGZPZv15CyyGo4Qf4Zfq" version="13.10.1" type="github">
+  <diagram id="u2slVhVgmf08d2AswuaU" name="Page-1">
+    <mxGraphModel dx="670" dy="676" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nfERtv76GZ-cldxSou6v-1" value="OrderServiceImpl" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nfERtv76GZ-cldxSou6v-2" value="≪interface≫&lt;br&gt;&lt;b&gt;DiscountPolicy&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nfERtv76GZ-cldxSou6v-3" value="" style="endArrow=openThin;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endSize=14;targetPerimeterSpacing=0;endFill=0;jumpSize=6;strokeWidth=2;" edge="1" parent="1" source="nfERtv76GZ-cldxSou6v-1" target="nfERtv76GZ-cldxSou6v-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="370" as="sourcePoint" />
+            <mxPoint x="250" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nfERtv76GZ-cldxSou6v-6" value="FixDiscountPolicy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nfERtv76GZ-cldxSou6v-7" value="RateDiscountPolicy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nfERtv76GZ-cldxSou6v-8" value="" style="endArrow=block;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;dashed=1;endFill=0;endSize=12;strokeWidth=2;" edge="1" parent="1" source="nfERtv76GZ-cldxSou6v-6" target="nfERtv76GZ-cldxSou6v-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="360" as="sourcePoint" />
+            <mxPoint x="250" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nfERtv76GZ-cldxSou6v-10" value="" style="endArrow=block;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;dashed=1;endFill=0;endSize=12;strokeWidth=2;" edge="1" parent="1" source="nfERtv76GZ-cldxSou6v-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="400" as="sourcePoint" />
+            <mxPoint x="420" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
